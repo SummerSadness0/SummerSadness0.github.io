@@ -5,10 +5,10 @@
 # Site
 title: Hexo
 subtitle:
-description:
+description: To the very best of times~
 keywords:
-author: SummerSadness0
-language: en
+author: SummerSadness
+language: zh-CN
 timezone:
 
 # URL
@@ -81,3 +81,9 @@ deploy:
   type: git
   repo: https://github.com/SummerSadness0/SummerSadness0.github.io.git
   branch: master
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
