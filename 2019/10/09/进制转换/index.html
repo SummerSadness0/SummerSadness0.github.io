@@ -56,31 +56,33 @@
   };
 </script>
 
-  <meta name="description" content="To the very best of times~">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://SummerSadness0.github.io/index.html">
+  <meta name="description" content="一、十进制转二进制方法一：输入一个十进制数n，每次用n除以2，把余数记下来，然后再用商去除以2……依次循环，直到商为0结束，把余数倒着依次输出即为转换后的二进制 12345678public void decimalToBinary(int n)&amp;#123;    String res = &quot;&quot;;    while(n != 0)&amp;#123;        res = n % 2 + res;">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="进制转换">
+<meta property="og:url" content="https://SummerSadness0.github.io/2019/10/09/进制转换/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="To the very best of times~">
+<meta property="og:description" content="一、十进制转二进制方法一：输入一个十进制数n，每次用n除以2，把余数记下来，然后再用商去除以2……依次循环，直到商为0结束，把余数倒着依次输出即为转换后的二进制 12345678public void decimalToBinary(int n)&amp;#123;    String res = &quot;&quot;;    while(n != 0)&amp;#123;        res = n % 2 + res;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-09T13:06:56.122Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="To the very best of times~">
-  <link rel="canonical" href="https://SummerSadness0.github.io/">
+<meta name="twitter:title" content="进制转换">
+<meta name="twitter:description" content="一、十进制转二进制方法一：输入一个十进制数n，每次用n除以2，把余数记下来，然后再用商去除以2……依次循环，直到商为0结束，把余数倒着依次输出即为转换后的二进制 12345678public void decimalToBinary(int n)&amp;#123;    String res = &quot;&quot;;    while(n != 0)&amp;#123;        res = n % 2 + res;">
+  <link rel="canonical" href="https://SummerSadness0.github.io/2019/10/09/进制转换/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Hexo</title>
+  <title>进制转换 | Hexo</title>
   
 
 
@@ -270,12 +272,13 @@
 
           <div id="content" class="content">
             
+
   <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block home">
+  <div class="post-block post">
     <link itemprop="mainEntityOfPage" href="https://SummerSadness0.github.io/2019/10/09/进制转换/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -288,9 +291,8 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/09/进制转换/" class="post-title-link" itemprop="url">进制转换</a>
+        <h1 class="post-title" itemprop="name headline">进制转换
+
           
         </h1>
 
@@ -314,6 +316,14 @@
           
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
         </div>
       </header>
@@ -324,7 +334,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="一、十进制转二进制"><a href="#一、十进制转二进制" class="headerlink" title="一、十进制转二进制"></a>一、十进制转二进制</h3><p><strong>方法一</strong>：输入一个十进制数n，每次用n除以2，把余数记下来，然后再用商去除以2……依次循环，直到商为0结束，把余数倒着依次输出即为转换后的二进制</p>
+        <h3 id="一、十进制转二进制"><a href="#一、十进制转二进制" class="headerlink" title="一、十进制转二进制"></a>一、十进制转二进制</h3><p><strong>方法一</strong>：输入一个十进制数n，每次用n除以2，把余数记下来，然后再用商去除以2……依次循环，直到商为0结束，把余数倒着依次输出即为转换后的二进制</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">decimalToBinary</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    String res = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">while</span>(n != <span class="number">0</span>)&#123;</span><br><span class="line">        res = n % <span class="number">2</span> + res;</span><br><span class="line">        n = n / <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(res);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>方法二</strong>：与1相与得到最低位的数字，右移一位与1相与得到次低位的数字，依次移位相与，得到每一位数字输出</p>
@@ -361,266 +371,52 @@
 
 <h3 id="八、二进制与八进制、十六进制"><a href="#八、二进制与八进制、十六进制" class="headerlink" title="八、二进制与八进制、十六进制"></a>八、二进制与八进制、十六进制</h3><p>这些进制可以通过十进制为桥梁，进行互转，比如说八进制要转为十六进制，那么可以先将八进制转为十进制，然后将十进制转为十六进制。</p>
 
-        
-      
     </div>
 
     
     
     
+        
+      
+
       <footer class="post-footer">
-          <div class="post-eof"></div>
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/算法/" rel="tag"># 算法</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/09/排序算法总结/" rel="next" title="排序算法总结">
+                  <i class="fa fa-chevron-left"></i> 排序算法总结
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
         
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://SummerSadness0.github.io/2019/10/09/排序算法总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SummerSadness">
-      <meta itemprop="description" content="To the very best of times~">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/09/排序算法总结/" class="post-title-link" itemprop="url">排序算法总结</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-09 10:42:57 / 修改时间：11:25:27" itemprop="dateCreated datePublished" datetime="2019-10-09T10:42:57+08:00">2019-10-09</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><h4 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h4><ol>
-<li>比较相邻两个元素，如果第一个比第二个大则交换</li>
-<li>从左至右遍历，对每一对相邻得元素做如上比较交换操作，遍历一遍后最大的数放到最后正确位置</li>
-<li>对除最后一个已排序的其它数重复步骤1、2，直到没有任何一对数字需要比较</li>
-</ol>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><h5 id="1-基础版"><a href="#1-基础版" class="headerlink" title="1. 基础版"></a>1. 基础版</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BubbleSort</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(arr == <span class="keyword">null</span> || arr.length == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> n = arr.length;</span><br><span class="line">        <span class="comment">//外层需要循环的次数，里层比较的次数</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n-<span class="number">1</span>; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n-<span class="number">1</span>-i； j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(arr[ij &gt; arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                    swap(arr, i, j);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-改进版"><a href="#2-改进版" class="headerlink" title="2. 改进版"></a>2. 改进版</h5><p>如果某一次遍历后发现没有元素需要交换，说明所有元素已经有序，则可直接跳出循环，不再进行后序比较交换操作</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BubbleSort</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(arr == <span class="keyword">null</span> || arr.length == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> n = arr.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n-<span class="number">1</span>; i++)&#123;</span><br><span class="line">            <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n-<span class="number">1</span>-i； j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(arr[ij &gt; arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                    swap(arr, i, j);</span><br><span class="line">                    flag = <span class="keyword">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!flag) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h4><ol>
-<li><h5 id="时间复杂度-O-n-2"><a href="#时间复杂度-O-n-2" class="headerlink" title="时间复杂度   O(n^2^)"></a>时间复杂度   O(n^2^)</h5></li>
-<li><h5 id="空间复杂度-O-1"><a href="#空间复杂度-O-1" class="headerlink" title="空间复杂度   O(1)"></a>空间复杂度   O(1)</h5></li>
-</ol>
-<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><h3 id="思想-1"><a href="#思想-1" class="headerlink" title="思想"></a>思想</h3><h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><h3 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><h2 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h2><h3 id="思想-2"><a href="#思想-2" class="headerlink" title="思想"></a>思想</h3><h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><h3 id="复杂度分析-2"><a href="#复杂度分析-2" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><h3 id="思想-3"><a href="#思想-3" class="headerlink" title="思想"></a>思想</h3><h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h3><h3 id="复杂度分析-3"><a href="#复杂度分析-3" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><h3 id="思想-4"><a href="#思想-4" class="headerlink" title="思想"></a>思想</h3><h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h3><h3 id="复杂度分析-4"><a href="#复杂度分析-4" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h3 id="思想-5"><a href="#思想-5" class="headerlink" title="思想"></a>思想</h3><h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h3><h3 id="复杂度分析-5"><a href="#复杂度分析-5" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><h2 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h2><h3 id="思想-6"><a href="#思想-6" class="headerlink" title="思想"></a>思想</h3><h3 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h3><h3 id="复杂度分析-6"><a href="#复杂度分析-6" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><h2 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h2><h3 id="思想-7"><a href="#思想-7" class="headerlink" title="思想"></a>思想</h3><h3 id="代码-7"><a href="#代码-7" class="headerlink" title="代码"></a>代码</h3><h3 id="复杂度分析-7"><a href="#复杂度分析-7" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><h2 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h2><h3 id="思想-8"><a href="#思想-8" class="headerlink" title="思想"></a>思想</h3><h3 id="代码-8"><a href="#代码-8" class="headerlink" title="代码"></a>代码</h3><h3 id="复杂度分析-8"><a href="#复杂度分析-8" class="headerlink" title="复杂度分析"></a>复杂度分析</h3>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
   </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://SummerSadness0.github.io/2019/10/09/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SummerSadness">
-      <meta itemprop="description" content="To the very best of times~">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/09/test/" class="post-title-link" itemprop="url">test</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-09 10:37:45 / 修改时间：10:39:19" itemprop="dateCreated datePublished" datetime="2019-10-09T10:37:45+08:00">2019-10-09</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h2><h2 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h2><h2 id="标题3"><a href="#标题3" class="headerlink" title="标题3"></a>标题3</h2><h2 id="标题4"><a href="#标题4" class="headerlink" title="标题4"></a>标题4</h2><h2 id="标题5"><a href="#标题5" class="headerlink" title="标题5"></a>标题5</h2>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://SummerSadness0.github.io/2019/10/08/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SummerSadness">
-      <meta itemprop="description" content="To the very best of times~">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/08/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-08 10:05:24" itemprop="dateCreated datePublished" datetime="2019-10-08T10:05:24+08:00">2019-10-08</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </div>
-
-  
 
 
           </div>
@@ -639,6 +435,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -651,6 +452,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、十进制转二进制"><span class="nav-number">1.</span> <span class="nav-text">一、十进制转二进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、十进制转八进制"><span class="nav-number">2.</span> <span class="nav-text">二、十进制转八进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、十进制转十六进制"><span class="nav-number">3.</span> <span class="nav-text">三、十进制转十六进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、十进制转二、八、十六进制总结"><span class="nav-number">4.</span> <span class="nav-text">四、十进制转二、八、十六进制总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、二进制转十进制"><span class="nav-number">5.</span> <span class="nav-text">五、二进制转十进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、八进制转十进制"><span class="nav-number">6.</span> <span class="nav-text">六、八进制转十进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七、十六进制转十进制"><span class="nav-number">7.</span> <span class="nav-text">七、十六进制转十进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八、二进制与八进制、十六进制"><span class="nav-number">8.</span> <span class="nav-text">八、二进制与八进制、十六进制</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
