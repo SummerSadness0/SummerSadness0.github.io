@@ -56,19 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="一、零钱兑换之最少硬币数1、题目  给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。 示例 1: 输入: coins = [1, 2, 5], amount = 11输出: 3解释: 11 = 5 + 5 + 1示例 2: 输入: coins = [2], amount = 3输出:">
-<meta name="keywords" content="算法">
+  <meta name="description" content="To the very best of times~">
 <meta property="og:type" content="article">
-<meta property="og:title" content="动态规划之零钱兑换">
-<meta property="og:url" content="https://SummerSadness0.github.io/2019/10/10/动态规划之零钱兑换/index.html">
+<meta property="og:title" content="Leetcode中和最长有关的题目总结">
+<meta property="og:url" content="https://SummerSadness0.github.io/2019/10/11/Leetcode中和最长有关的题目总结/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、零钱兑换之最少硬币数1、题目  给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。 示例 1: 输入: coins = [1, 2, 5], amount = 11输出: 3解释: 11 = 5 + 5 + 1示例 2: 输入: coins = [2], amount = 3输出:">
+<meta property="og:description" content="To the very best of times~">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-10T10:46:54.685Z">
+<meta property="og:updated_time" content="2019-10-11T01:45:33.946Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="动态规划之零钱兑换">
-<meta name="twitter:description" content="一、零钱兑换之最少硬币数1、题目  给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。 示例 1: 输入: coins = [1, 2, 5], amount = 11输出: 3解释: 11 = 5 + 5 + 1示例 2: 输入: coins = [2], amount = 3输出:">
-  <link rel="canonical" href="https://SummerSadness0.github.io/2019/10/10/动态规划之零钱兑换/">
+<meta name="twitter:title" content="Leetcode中和最长有关的题目总结">
+<meta name="twitter:description" content="To the very best of times~">
+  <link rel="canonical" href="https://SummerSadness0.github.io/2019/10/11/Leetcode中和最长有关的题目总结/">
 
 
 <script id="page-configurations">
@@ -82,7 +81,7 @@
   };
 </script>
 
-  <title>动态规划之零钱兑换 | Hexo</title>
+  <title>Leetcode中和最长有关的题目总结 | Hexo</title>
   
 
 
@@ -279,7 +278,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://SummerSadness0.github.io/2019/10/10/动态规划之零钱兑换/">
+    <link itemprop="mainEntityOfPage" href="https://SummerSadness0.github.io/2019/10/11/Leetcode中和最长有关的题目总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SummerSadness">
@@ -291,7 +290,7 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">动态规划之零钱兑换
+        <h1 class="post-title" itemprop="name headline">Leetcode中和最长有关的题目总结
 
           
         </h1>
@@ -307,7 +306,7 @@
                 
               
 
-              <time title="创建时间：2019-10-10 11:20:54 / 修改时间：18:46:54" itemprop="dateCreated datePublished" datetime="2019-10-10T11:20:54+08:00">2019-10-10</time>
+              <time title="创建时间：2019-10-11 09:45:32 / 修改时间：09:45:33" itemprop="dateCreated datePublished" datetime="2019-10-11T09:45:32+08:00">2019-10-11</time>
             </span>
           
             
@@ -334,32 +333,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="一、零钱兑换之最少硬币数"><a href="#一、零钱兑换之最少硬币数" class="headerlink" title="一、零钱兑换之最少硬币数"></a>一、零钱兑换之最少硬币数</h3><p>1、题目</p>
-<blockquote>
-<p>给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。</p>
-<p>示例 1:</p>
-<p>输入: coins = [1, 2, 5], amount = 11<br>输出: 3<br>解释: 11 = 5 + 5 + 1<br>示例 2:</p>
-<p>输入: coins = [2], amount = 3<br>输出: -1</p>
-</blockquote>
-<p>2、思路</p>
-<p>① 创建dp数组，<code>dp[i]</code>表示金额为<code>i</code>时所需的最少的硬币数</p>
-<p>②初始化dp数组，<code>Integer.MAX_VALUE</code>表示金额<code>i</code> 无法用硬币组合成，dp[0] = 0，amount=0时硬币数为0</p>
-<p>③第一层for循环遍历硬币，i=2代表只在第0个，第1个，第2个这三个硬币中选择硬币</p>
-<p>④第二层for循环进行取舍看当前硬币是取还是不取</p>
-<p>3、代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">coinChange</span><span class="params">(<span class="keyword">int</span>[] coins, <span class="keyword">int</span> amount)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(coins == <span class="keyword">null</span> || amount &lt; <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[amount + <span class="number">1</span>];</span><br><span class="line">        Arrays.fill(dp, Integer.MAX_VALUE);</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">0</span>;       </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; coins.length; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = coins[i]; j &lt;= amount; j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(dp[j-coins[i]] != Integer.MAX_VALUE)</span><br><span class="line">                    dp[j] = Math.min(dp[j],dp[j-coins[i]]+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[amount]==Integer.MAX_VALUE?-<span class="number">1</span>:dp[amount];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="二、零钱兑换之组合方案数"><a href="#二、零钱兑换之组合方案数" class="headerlink" title="二、零钱兑换之组合方案数"></a>二、零钱兑换之组合方案数</h3><p>1、题目</p>
-<blockquote>
-<p>给定不同面额的硬币和一个总金额。写出函数来计算可以凑成总金额的硬币组合数。假设每一种面额的硬币有无限个。  </p>
-<p>示例 1:</p>
-<p>输入: amount = 5, coins = [1, 2, 5]<br>输出: 4<br>解释: 有四种方式可以凑成总金额:<br>5=5<br>5=2+2+1<br>5=2+1+1+1<br>5=1+1+1+1+1<br>示例 2:</p>
-<p>输入: amount = 3, coins = [2]<br>输出: 0<br>解释: 只用面额2的硬币不能凑成总金额3。<br>示例 3:</p>
-<p>输入: amount = 10, coins = [10]<br>输出: 1</p>
-</blockquote>
-<p>2、思路</p>
-<p>3、代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> amount, <span class="keyword">int</span>[] coins)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(coins == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[amount+<span class="number">1</span>];</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; coins.length; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = coins[i]; j &lt;= amount; j++)&#123;</span><br><span class="line">                dp[j] = dp[j]+dp[j-coins[i]];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[amount];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        
     </div>
 
     
@@ -369,23 +343,14 @@
       
 
       <footer class="post-footer">
-          
-            
-          
-          <div class="post-tags">
-            
-              <a href="/tags/算法/" rel="tag"># 算法</a>
-            
-          </div>
-        
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/09/进制转换/" rel="next" title="进制转换">
-                  <i class="fa fa-chevron-left"></i> 进制转换
+                <a href="/2019/10/10/动态规划之零钱兑换/" rel="next" title="动态规划之零钱兑换">
+                  <i class="fa fa-chevron-left"></i> 动态规划之零钱兑换
                 </a>
               
             </div>
@@ -394,8 +359,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/10/11/Leetcode中和最长有关的题目总结/" rel="prev" title="Leetcode中和最长有关的题目总结">
-                  Leetcode中和最长有关的题目总结 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/10/16/Leetcode中组合总和系列/" rel="prev" title="Leetcode中组合总和系列">
+                  Leetcode中组合总和系列 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -445,8 +410,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、零钱兑换之最少硬币数"><span class="nav-number">1.</span> <span class="nav-text">一、零钱兑换之最少硬币数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、零钱兑换之组合方案数"><span class="nav-number">2.</span> <span class="nav-text">二、零钱兑换之组合方案数</span></a></li></ol></div>
-        
       </div>
       <!--/noindex-->
 
